@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagram_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3s-LH-5vf">
+                                <rect key="frame" x="159" y="318" width="56" height="30"/>
+                                <state key="normal" title="사진 선택"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVM-xr-ejN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66V-Gv-hFF">
+                                <rect key="frame" x="67" y="70" width="240" height="240"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-wM-VnA">
+                                <rect key="frame" x="159" y="356" width="56" height="30"/>
+                                <state key="normal" title="필터 선택"/>
+                                <connections>
+                                    <segue destination="clg-pK-gpS" kind="show" identifier="FilterSegue" id="nBY-mo-QdN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s3s-LH-5vf" firstAttribute="top" secondItem="66V-Gv-hFF" secondAttribute="bottom" constant="8" symbolic="YES" id="207-Gu-tRy"/>
+                            <constraint firstItem="66V-Gv-hFF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="9P7-89-bWg"/>
+                            <constraint firstItem="s3s-LH-5vf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GAz-hJ-Z1D"/>
+                            <constraint firstItem="ddv-wM-VnA" firstAttribute="top" secondItem="s3s-LH-5vf" secondAttribute="bottom" constant="8" symbolic="YES" id="Il9-3c-Hwl"/>
+                            <constraint firstItem="66V-Gv-hFF" firstAttribute="centerX" secondItem="s3s-LH-5vf" secondAttribute="centerX" id="a5w-uz-7aA"/>
+                            <constraint firstItem="s3s-LH-5vf" firstAttribute="leading" secondItem="ddv-wM-VnA" secondAttribute="leading" id="elW-My-pga"/>
+                            <constraint firstItem="66V-Gv-hFF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="tSM-Ab-yvZ"/>
+                            <constraint firstItem="66V-Gv-hFF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zal-44-CU3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="66V-Gv-hFF" id="wri-lt-6ke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="5U7-f1-XpJ">
+            <objects>
+                <viewController id="clg-pK-gpS" customClass="FilterViewController" customModule="instagram_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aai-6W-V2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="WiB-aQ-nyL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Mm-kf-ube">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-u4-pYB">
+                                <rect key="frame" x="0.0" y="57" width="375" height="375"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YAV-Cl-D6u">
+                                <rect key="frame" x="0.0" y="440" width="375" height="219"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="W8B-WY-Whn"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EoN-gl-85N">
+                                    <size key="itemSize" width="85" height="115"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="UnL-l2-r44" customClass="FilterCell" customModule="instagram_clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="52" width="85" height="115"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NWj-Y4-M3p">
+                                                    <rect key="frame" x="0.0" y="30" width="85" height="85"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxR-QJ-8En">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ghh-dy-IO3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="NWj-Y4-M3p" firstAttribute="top" secondItem="cxR-QJ-8En" secondAttribute="bottom" id="1fx-a9-dEr"/>
+                                            <constraint firstItem="cxR-QJ-8En" firstAttribute="trailing" secondItem="NWj-Y4-M3p" secondAttribute="trailing" id="GeJ-RQ-HUb"/>
+                                            <constraint firstAttribute="trailing" secondItem="cxR-QJ-8En" secondAttribute="trailing" id="LOc-pE-ha1"/>
+                                            <constraint firstAttribute="bottom" secondItem="NWj-Y4-M3p" secondAttribute="bottom" id="Rjw-Gh-S77"/>
+                                            <constraint firstItem="cxR-QJ-8En" firstAttribute="leading" secondItem="NWj-Y4-M3p" secondAttribute="leading" id="Zfc-nr-5s6"/>
+                                            <constraint firstItem="cxR-QJ-8En" firstAttribute="leading" secondItem="UnL-l2-r44" secondAttribute="leading" id="dqB-bB-Gof"/>
+                                            <constraint firstItem="cxR-QJ-8En" firstAttribute="top" secondItem="UnL-l2-r44" secondAttribute="top" id="ju9-dX-AK1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="filterImage" destination="NWj-Y4-M3p" id="Fjh-16-sZ6"/>
+                                            <outlet property="filterLabel" destination="cxR-QJ-8En" id="1ME-xC-HJd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WiB-aQ-nyL" firstAttribute="top" secondItem="YAV-Cl-D6u" secondAttribute="bottom" constant="8" symbolic="YES" id="5Dh-f2-YLU"/>
+                            <constraint firstItem="bM5-u4-pYB" firstAttribute="trailing" secondItem="YAV-Cl-D6u" secondAttribute="trailing" id="703-Vm-t3h"/>
+                            <constraint firstItem="bM5-u4-pYB" firstAttribute="leading" secondItem="2Mm-kf-ube" secondAttribute="leading" id="8nG-rd-Cnq"/>
+                            <constraint firstAttribute="trailing" secondItem="bM5-u4-pYB" secondAttribute="trailing" id="bPO-wq-ymP"/>
+                            <constraint firstItem="YAV-Cl-D6u" firstAttribute="top" secondItem="bM5-u4-pYB" secondAttribute="bottom" constant="8" symbolic="YES" id="ks5-4D-08k"/>
+                            <constraint firstItem="bM5-u4-pYB" firstAttribute="top" secondItem="aai-6W-V2n" secondAttribute="bottom" constant="37" id="oKM-dt-0Xc"/>
+                            <constraint firstItem="bM5-u4-pYB" firstAttribute="leading" secondItem="YAV-Cl-D6u" secondAttribute="leading" id="qga-6k-eYX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="YAV-Cl-D6u" id="Hrn-ON-o5U"/>
+                        <outlet property="imageView" destination="bM5-u4-pYB" id="Nva-MX-oL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf1-uq-eeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.79999999999995" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
